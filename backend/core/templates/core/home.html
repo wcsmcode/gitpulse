@@ -1,0 +1,481 @@
+{% extends 'core/base.html' %}
+
+{% block title %}GitPulse &bull; Ship fixes faster with micro-bounties built for engineers{% endblock %}
+
+{% block content %}
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <!-- 2. Hero Section (Centered Headline + Animated Product Canvas) -->
+    <section class="relative pt-12 pb-20 sm:pt-20 sm:pb-28 text-center" id="product">
+        <div class="max-w-4xl mx-auto">
+            <!-- Shimmer Announcement Pill -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs font-mono text-zinc-300 mb-8 shadow-sm backdrop-blur-md relative overflow-hidden group hover:border-white/25 transition-colors duration-300">
+                <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full animate-shimmer"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span class="text-zinc-300">New &bull; Atomic Bounty Payouts &amp; GitHub Repo Sync</span>
+                <i data-lucide="arrow-right" class="w-3 h-3 text-zinc-400 group-hover:translate-x-0.5 transition-transform duration-200"></i>
+            </div>
+
+            <!-- Massive Ultra-Tight Display Headline -->
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-[-0.04em] leading-[1.05] text-zinc-100 mb-7">
+                Ship fixes faster with <br class="hidden sm:inline" />
+                <span class="bg-gradient-to-b from-white via-white to-zinc-400 bg-clip-text text-transparent">
+                    micro-bounties built for engineers.
+                </span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-sans font-normal">
+                Attach XP bounties to real GitHub issues, enforce review state machines, and reward the developers who actually crush tech debt.
+            </p>
+
+            <!-- CTA Row -->
+            <div class="flex flex-wrap items-center justify-center gap-3.5 mb-16 sm:mb-20">
+                <a 
+                    href="http://localhost:5173/" 
+                    class="px-7 py-3 rounded-full bg-white hover:bg-zinc-200 text-zinc-950 font-semibold text-xs sm:text-sm flex items-center gap-2.5 transition-all duration-200 shadow-xl shadow-white/5 hover:-translate-y-0.5 group"
+                >
+                    <span>Launch Workspace</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+                </a>
+                <a 
+                    href="/api/docs/" 
+                    target="_blank" 
+                    class="px-6 py-3 rounded-full glass-surface hover:bg-white/[0.06] text-zinc-300 hover:text-white font-medium text-xs sm:text-sm font-mono flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5"
+                >
+                    <i data-lucide="terminal" class="w-3.5 h-3.5 text-zinc-400"></i>
+                    <span>Explore DRF API</span>
+                </a>
+            </div>
+
+            <!-- Interactive Hero Showcase Frame (The Framer Signature: 3D perspective tilt) -->
+            <div class="perspective-container max-w-5xl mx-auto px-2">
+                <div class="tilt-card rounded-2xl glass-surface p-2 sm:p-3 relative shadow-2xl">
+                    <!-- Subtle Conic/Radial Glow behind Mockup Frame -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500/15 via-emerald-500/10 to-cyan-500/15 rounded-2xl blur-xl -z-10 opacity-70"></div>
+
+                    <!-- Inner Mockup Window -->
+                    <div class="bg-[#0b0b0e] border border-white/5 rounded-xl overflow-hidden text-left flex flex-col">
+                        <!-- Window Chrome Topbar -->
+                        <div class="h-9 px-4 bg-zinc-950/80 border-b border-white/5 flex items-center justify-between text-[11px] font-mono text-zinc-500 select-none">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+                                <span class="ml-2 text-zinc-400">gitpulse.workspace &mdash; core-engine</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="flex items-center gap-1 text-emerald-400">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    Syncing
+                                </span>
+                                <span class="text-zinc-600">|</span>
+                                <span class="text-zinc-400 font-sans">v1.4.2</span>
+                            </div>
+                        </div>
+
+                        <!-- 3-Pane Mini UI Preview Canvas -->
+                        <div class="grid grid-cols-12 min-h-[340px] text-xs">
+                            <!-- Left Mini-Sidebar -->
+                            <div class="hidden md:flex md:col-span-3 border-r border-white/5 p-3.5 flex-col justify-between bg-zinc-950/40 font-mono text-[11px]">
+                                <div class="space-y-3">
+                                    <div class="p-2 rounded-lg bg-white/[0.03] border border-white/5">
+                                        <div class="text-[10px] text-zinc-500 uppercase">Active Org</div>
+                                        <div class="font-bold text-zinc-200 truncate">GitPulse Engine</div>
+                                        <div class="text-zinc-500 text-[10px] flex items-center gap-1 mt-1">
+                                            <i data-lucide="star" class="w-3 h-3 text-amber-400 fill-amber-400"></i>
+                                            4.2k stars
+                                        </div>
+                                    </div>
+                                    <div class="space-y-1 font-sans">
+                                        <div class="px-2 py-1.5 rounded bg-white/5 text-zinc-200 font-medium flex items-center justify-between">
+                                            <span class="flex items-center gap-1.5"><i data-lucide="kanban" class="w-3 h-3 text-indigo-400"></i> Board</span>
+                                            <span class="text-[10px] font-mono text-zinc-400">12</span>
+                                        </div>
+                                        <div class="px-2 py-1.5 rounded text-zinc-400 hover:text-zinc-200 flex items-center justify-between">
+                                            <span class="flex items-center gap-1.5"><i data-lucide="trophy" class="w-3 h-3 text-amber-400"></i> Hunters</span>
+                                            <span class="text-[10px] font-mono text-zinc-500">5</span>
+                                        </div>
+                                        <div class="px-2 py-1.5 rounded text-zinc-400 hover:text-zinc-200 flex items-center gap-1.5">
+                                            <i data-lucide="settings" class="w-3 h-3"></i> Sync Config
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-2 rounded bg-emerald-950/20 border border-emerald-900/30 text-[10px] text-emerald-400 font-mono flex items-center gap-1.5">
+                                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                                    <span>Atomic Verified</span>
+                                </div>
+                            </div>
+
+                            <!-- Center 3-Column Mini Kanban -->
+                            <div class="col-span-12 md:col-span-6 p-4 bg-[#09090c] space-y-3">
+                                <div class="flex items-center justify-between pb-2 border-b border-white/5 font-mono text-[11px] text-zinc-400">
+                                    <span class="flex items-center gap-1 text-zinc-200 font-sans font-semibold">
+                                        <i data-lucide="kanban" class="w-3.5 h-3.5 text-indigo-400"></i> Sprint Bounties
+                                    </span>
+                                    <span class="text-emerald-400 font-bold">+1,450 XP Pool</span>
+                                </div>
+
+                                <!-- Mini Columns Preview -->
+                                <div class="grid grid-cols-3 gap-2.5">
+                                    <!-- Column: Open -->
+                                    <div class="p-2 rounded-lg bg-zinc-950/60 border border-white/5 space-y-2">
+                                        <div class="text-[10px] font-mono uppercase text-zinc-400 font-bold flex justify-between">
+                                            <span>Open</span>
+                                            <span class="text-zinc-400">2</span>
+                                        </div>
+                                        <div class="p-2 rounded bg-zinc-900 border border-white/5 space-y-1.5 hover:border-indigo-500/40 transition">
+                                            <div class="flex justify-between items-center text-[9px] font-mono">
+                                                <span class="text-rose-400">CRITICAL</span>
+                                                <span class="text-emerald-400 font-bold">+500 XP</span>
+                                            </div>
+                                            <div class="text-[11px] text-zinc-200 font-medium leading-tight line-clamp-2">
+                                                #42 Fix PostgreSQL N+1 Query Bottleneck
+                                            </div>
+                                            <div class="text-[9px] font-mono text-zinc-400">#backend</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column: In Review -->
+                                    <div class="p-2 rounded-lg bg-zinc-950/60 border border-white/5 space-y-2">
+                                        <div class="text-[10px] font-mono uppercase text-amber-400 font-bold flex justify-between">
+                                            <span>In Review</span>
+                                            <span class="text-zinc-400">1</span>
+                                        </div>
+                                        <div class="p-2 rounded bg-zinc-900 border border-white/5 space-y-1.5">
+                                            <div class="flex justify-between items-center text-[9px] font-mono">
+                                                <span class="text-amber-400">HIGH</span>
+                                                <span class="text-emerald-400 font-bold">+350 XP</span>
+                                            </div>
+                                            <div class="text-[11px] text-zinc-200 font-medium leading-tight line-clamp-2">
+                                                #58 Token Auth Token Guard
+                                            </div>
+                                            <div class="text-[9px] font-mono text-zinc-400">PR #102 linked</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column: Closed -->
+                                    <div class="p-2 rounded-lg bg-zinc-950/60 border border-white/5 space-y-2">
+                                        <div class="text-[10px] font-mono uppercase text-emerald-400 font-bold flex justify-between">
+                                            <span>Paid</span>
+                                            <span class="text-zinc-400">8</span>
+                                        </div>
+                                        <div class="p-2 rounded bg-zinc-900 border border-emerald-900/30 space-y-1.5 opacity-80">
+                                            <div class="flex justify-between items-center text-[9px] font-mono">
+                                                <span class="text-emerald-400">SETTLED</span>
+                                                <span class="text-emerald-400 font-bold">+600 XP</span>
+                                            </div>
+                                            <div class="text-[11px] text-zinc-300 font-medium line-clamp-1">
+                                                #31 Atomic XP Ledger
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Live-Activity Ticker -->
+                            <div class="hidden md:flex md:col-span-3 border-l border-white/5 p-3.5 flex-col justify-between bg-zinc-950/40 font-mono text-[11px]">
+                                <div class="space-y-3">
+                                    <div class="text-[10px] text-zinc-400 uppercase font-bold flex items-center gap-1.5">
+                                        <i data-lucide="activity" class="w-3 h-3 text-emerald-400"></i> Live Activity
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="p-2 rounded bg-white/[0.02] border border-white/5 text-[10px] space-y-1">
+                                            <div class="text-emerald-400 font-bold flex items-center justify-between">
+                                                <span>+500 XP Settled</span>
+                                                <span class="text-zinc-400">2m ago</span>
+                                            </div>
+                                            <div class="text-zinc-300">Awarded to @dev_alex</div>
+                                        </div>
+                                        <div class="p-2 rounded bg-white/[0.02] border border-white/5 text-[10px] space-y-1">
+                                            <div class="text-indigo-300 font-bold flex items-center justify-between">
+                                                <span>Issue Claimed</span>
+                                                <span class="text-zinc-400">12m ago</span>
+                                            </div>
+                                            <div class="text-zinc-300">#42 claimed by @elena_rust</div>
+                                        </div>
+                                        <div class="p-2 rounded bg-white/[0.02] border border-white/5 text-[10px] space-y-1">
+                                            <div class="text-amber-400 font-bold flex items-center justify-between">
+                                                <span>GitHub Synced</span>
+                                                <span class="text-zinc-400">1h ago</span>
+                                            </div>
+                                            <div class="text-zinc-300">30 issues imported from GitHub</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-2 border-t border-white/5 text-[10px] text-zinc-400 flex justify-between">
+                                    <span>Latency: 4.8ms</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Infinite Tech & Team Marquee Ticker -->
+    <section class="py-8 border-y border-white/5 overflow-hidden marquee-fade relative">
+        <div class="flex gap-10 whitespace-nowrap animate-marquee w-max text-xs font-mono text-zinc-400">
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Django REST Framework</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> PostgreSQL Atomic Ledger</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> GitHub REST API v3</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> React 18 Single Page App</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Role-Based Access Control</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Zero N+1 Queries</span>
+            <span class="text-zinc-700">&bull;</span>
+            <!-- Duplicated for seamless loop -->
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Django REST Framework</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> PostgreSQL Atomic Ledger</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> GitHub REST API v3</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> React 18 Single Page App</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Role-Based Access Control</span>
+            <span class="text-zinc-700">&bull;</span>
+            <span class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Zero N+1 Queries</span>
+        </div>
+    </section>
+
+    <!-- 4. Interactive Bento Feature Grid ("Built for shipping standout code") -->
+    <section class="py-24" id="architecture">
+        <div class="text-center max-w-xl mx-auto mb-16 reveal">
+            <span class="text-xs font-mono font-semibold uppercase tracking-wider text-indigo-400 block mb-2">
+                Engineering Velocity
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                Built for shipping standout code.
+            </h2>
+            <p class="text-sm text-zinc-400 mt-3 font-sans">
+                Every component is engineered to eliminate friction between spotting a bug and rewarding its resolution.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+            <!-- Card 1: Large (col-span-7) — Live GitHub Sync -->
+            <div class="bento-card md:col-span-7 p-7 rounded-2xl glass-surface flex flex-col justify-between reveal">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-200 mb-6">
+                        <i data-lucide="git-branch" class="w-5 h-5 text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Live GitHub Repository Ingestion</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-sans max-w-lg mb-6">
+                        Connect any GitHub repository with one click. Issues, pull requests, and labels (<code class="text-indigo-300 font-mono">critical</code>, <code class="text-amber-300 font-mono">bug</code>, <code class="text-emerald-300 font-mono">bounty:500</code>) are automatically parsed into XP tiers with idempotent deduplication.
+                    </p>
+                </div>
+
+                <!-- Live Status Terminal Widget -->
+                <div class="p-3.5 rounded-xl bg-black/60 border border-white/5 font-mono text-xs space-y-2">
+                    <div class="flex items-center justify-between text-zinc-400 text-[11px] pb-1 border-b border-white/5">
+                        <span class="flex items-center gap-1.5 text-zinc-300">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            pallets / flask
+                        </span>
+                        <span class="text-zinc-500">sync_github &bull; 200 OK</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-[10px] text-zinc-400">
+                        <div>Stars: <span class="text-amber-400 font-bold">68.2k</span></div>
+                        <div>Language: <span class="text-indigo-300 font-bold">Python</span></div>
+                        <div>Ingested: <span class="text-emerald-400 font-bold">30 issues</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Medium (col-span-5) — Strict RBAC State Machine -->
+            <div class="bento-card md:col-span-5 p-7 rounded-2xl glass-surface flex flex-col justify-between reveal" style="transition-delay: 100ms;">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-200 mb-6">
+                        <i data-lucide="git-pull-request" class="w-5 h-5 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Strict RBAC State Machine</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-sans mb-6">
+                        Enforces an unambiguous lifecycle guarding issue integrity. No race conditions, no duplicate claims.
+                    </p>
+                </div>
+
+                <!-- Visual Node Progression Diagram -->
+                <div class="p-4 rounded-xl bg-black/60 border border-white/5 flex items-center justify-between font-mono text-[10px] relative overflow-hidden">
+                    <div class="flex flex-col items-center gap-1 z-10">
+                        <span class="w-6 h-6 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center text-zinc-300 font-bold">1</span>
+                        <span class="text-zinc-400">OPEN</span>
+                    </div>
+                    <div class="h-0.5 flex-1 bg-gradient-to-r from-zinc-700 via-amber-500/60 to-indigo-500/60 mx-1"></div>
+                    <div class="flex flex-col items-center gap-1 z-10">
+                        <span class="w-6 h-6 rounded-full bg-amber-950/80 border border-amber-600/60 text-amber-300 flex items-center justify-center font-bold">2</span>
+                        <span class="text-amber-400">CLAIMED</span>
+                    </div>
+                    <div class="h-0.5 flex-1 bg-gradient-to-r from-indigo-500/60 to-emerald-500/60 mx-1"></div>
+                    <div class="flex flex-col items-center gap-1 z-10">
+                        <span class="w-6 h-6 rounded-full bg-emerald-950/80 border border-emerald-600/60 text-emerald-300 flex items-center justify-center font-bold">3</span>
+                        <span class="text-emerald-400">PAID</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Medium (col-span-5) — Atomic XP Settlement -->
+            <div class="bento-card md:col-span-5 p-7 rounded-2xl glass-surface flex flex-col justify-between reveal">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-200 mb-6">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Atomic XP Settlement</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-sans mb-6">
+                        Bounties are committed directly via <code class="text-emerald-300 font-mono">transaction.atomic</code> with <code class="text-zinc-300 font-mono">select_for_update</code> row locks, guaranteeing tamper-proof reputation credits.
+                    </p>
+                </div>
+
+                <!-- Glowing Ledger Preview -->
+                <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-800/40 font-mono text-xs flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="w-7 h-7 rounded-lg bg-emerald-900/50 flex items-center justify-center text-emerald-400 font-bold">
+                            XP
+                        </div>
+                        <div>
+                            <div class="text-zinc-200 font-bold text-xs">+500 XP Payout</div>
+                            <div class="text-[10px] text-zinc-500">BountyTransaction #1024</div>
+                        </div>
+                    </div>
+                    <span class="px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300 text-[10px] font-bold">
+                        VERIFIED
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 4: Large (col-span-7) — Engineering Leaderboard -->
+            <div class="bento-card md:col-span-7 p-7 rounded-2xl glass-surface flex flex-col justify-between reveal" style="transition-delay: 100ms;">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-200 mb-6">
+                        <i data-lucide="trophy" class="w-5 h-5 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Engineering Reputation Leaderboard</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-sans max-w-lg mb-6">
+                        Track who consistently fixes the toughest bugs. Transparent rankings based on accumulated bounty points earned on merged pull requests.
+                    </p>
+                </div>
+
+                <!-- Mini Leaderboard Preview -->
+                <div class="rounded-xl bg-black/60 border border-white/5 divide-y divide-white/5 overflow-hidden text-xs font-mono">
+                    <div class="p-2.5 px-3 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-[10px] font-bold">1</span>
+                            <span class="text-zinc-200 font-medium">elena_rust</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-24 h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+                                <div class="w-[85%] h-full bg-amber-400"></div>
+                            </div>
+                            <span class="text-amber-400 font-bold">2,480 XP</span>
+                        </div>
+                    </div>
+                    <div class="p-2.5 px-3 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-zinc-400/20 text-zinc-300 flex items-center justify-center text-[10px] font-bold">2</span>
+                            <span class="text-zinc-200 font-medium">marcus_sec</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-24 h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+                                <div class="w-[68%] h-full bg-indigo-400"></div>
+                            </div>
+                            <span class="text-indigo-400 font-bold">1,890 XP</span>
+                        </div>
+                    </div>
+                    <div class="p-2.5 px-3 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-amber-700/20 text-amber-500 flex items-center justify-center text-[10px] font-bold">3</span>
+                            <span class="text-zinc-200 font-medium">alex_dev (You)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-24 h-1.5 rounded-full bg-zinc-800 overflow-hidden">
+                                <div class="w-[50%] h-full bg-emerald-400"></div>
+                            </div>
+                            <span class="text-emerald-400 font-bold">1,250 XP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 3-Step Workflow Strip ("How it Works") -->
+    <section class="py-20 border-t border-white/5" id="workflow">
+        <div class="text-center max-w-xl mx-auto mb-14 reveal">
+            <span class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-400 block mb-2">
+                Simple Execution
+            </span>
+            <h2 class="text-3xl font-bold tracking-tight text-white">
+                How It Works in 3 Steps
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Step 1 -->
+            <div class="p-6 rounded-2xl glass-surface reveal">
+                <div class="text-xs font-mono font-bold text-indigo-400 mb-2">01 / Ingestion</div>
+                <h4 class="text-base font-semibold text-white mb-2">Sync Repository</h4>
+                <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+                    Workspace maintainers link target GitHub repos. Labels instantly calculate bounty XP stakes.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="p-6 rounded-2xl glass-surface reveal" style="transition-delay: 150ms;">
+                <div class="text-xs font-mono font-bold text-amber-400 mb-2">02 / Execution</div>
+                <h4 class="text-base font-semibold text-white mb-2">Claim &amp; Solve</h4>
+                <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+                    Developers claim open bounties, submit pull requests, and transition issues to In Review.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="p-6 rounded-2xl glass-surface reveal" style="transition-delay: 300ms;">
+                <div class="text-xs font-mono font-bold text-emerald-400 mb-2">03 / Reward</div>
+                <h4 class="text-base font-semibold text-white mb-2">Approve &amp; Pay</h4>
+                <p class="text-xs text-zinc-400 leading-relaxed font-sans">
+                    Maintainer code review triggers atomic database payout, crediting XP directly to the profile.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="py-20">
+        <div class="relative p-10 sm:p-14 rounded-3xl glass-surface border border-white/10 text-center overflow-hidden reveal">
+            <!-- Glow background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-emerald-500/10 to-cyan-500/10 opacity-70 blur-2xl"></div>
+
+            <div class="relative z-10 max-w-xl mx-auto">
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+                    Ready to clear your backlog?
+                </h3>
+                <p class="text-sm text-zinc-400 mb-8 font-sans">
+                    Join developers using micro-bounties to make tech-debt resolution motivating, competitive, and rewarding.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a 
+                        href="http://localhost:5173/?mode=register" 
+                        class="px-7 py-3 rounded-full bg-white hover:bg-zinc-200 text-zinc-950 font-semibold text-xs sm:text-sm flex items-center gap-2 transition-all duration-200 shadow-xl shadow-white/5 hover:-translate-y-0.5"
+                    >
+                        <span>Get Started Free</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a 
+                        href="http://localhost:5173/" 
+                        class="px-6 py-3 rounded-full glass-surface hover:bg-white/[0.06] text-zinc-300 hover:text-white font-medium text-xs sm:text-sm flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5"
+                    >
+                        <span>Open App</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
